@@ -1,2 +1,4 @@
-# letter-workshop
-Website to showcase the work of channel "A Oficina das Letras" for portuguese alphabetization
+# Letter Workshop / Oficina das Letras
+
+"Oficina das Letras" is a Youtube channel by teacher Yone Aquino for the alphabetization of Portuguese speaking teens and adults. Fellow teachers may also use the material to teach their students.
+This project aims to provide a website for the Workshop, making it easier to access classes, resources and lesson notes.
