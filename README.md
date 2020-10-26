@@ -5,4 +5,6 @@ This project aims to provide a website for the Workshop, making it easier to acc
 
 Resources used:  
 [A Oficina das Letras](https://www.youtube.com/channel/UCoBYlXkwUlbGVccrsB8iaLg/about)  
-[pa87901/repoStarterKit](https://github.com/pa87901/repoStarterKit)  
+[repoStarterKit](https://github.com/pa87901/repoStarterKit)  
+[Full Stack React: How to Build Your Own Blog Using Express, Hooks, & Postgres](https://www.freecodecamp.org/news/fullstack-react-blog-app-with-express-and-psql/)  
+[How to Get Started with React — A Modern Project-based Guide for Beginners (Including Hooks)](https://www.freecodecamp.org/news/getting-started-with-react-a-modern-project-based-guide-for-beginners-including-hooks-2/#creatingareactapp)  
