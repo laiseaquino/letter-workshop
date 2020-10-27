@@ -3,14 +3,16 @@ import "./styles.css";
 
 const App = () => {
 
+    const apiKey = "your API key";
     const [videos, setVideos] = React.useState([]);
 
     React.useEffect(() => {
-        fetch("https://randomuser.me/api/?results=3")
+        fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&part=" +
+                "contentDetails&maxResults=5&playlistId=PLwWyDK8eZvNPzz53-Uz_DFXDJwoQb6c7W&key=" + apiKey)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                setVideos(data.results);
+                console.log(data.items);
+                setVideos(data.items);
             });
     }, []);
 
@@ -18,10 +20,9 @@ const App = () => {
         <>
             {videos.map(video => (
                 <VideoCard
-                    thumbnail={video.picture.large}
-                    name={video.name.first + " " + video.name.last}
-                    desc={video.email}
-                    date={video.dob.date} 
+                    thumbnail={video.snippet.thumbnails.medium.url}
+                    name={video.snippet.title}
+                    date={video.snippet.publishedAt} 
                 />                   
             ))}
         </>
@@ -29,16 +30,12 @@ const App = () => {
 };
 
 const VideoCard = props => {
-    const [showDate, setShowDate] = React.useState(true);
-
     return (
         <div className="video-card">
             <img src={props.thumbnail} alt="profile" />
             <div className="video-details">
                 <p>Nome: {props.name}</p>
-                <p>Tópico: {props.desc}</p>
-                <button onClick={() => setShowDate(!showDate)}>Exibir Data </button>
-                {showDate && <p>Data: {props.date}</p>}
+                <p>Data: {props.date}</p>
             </div>
         </div>
     );
